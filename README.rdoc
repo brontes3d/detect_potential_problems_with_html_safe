@@ -1,0 +1,8 @@
+raise warnings when ActiveSupport::SafeBuffer concats an unsafe string
+
+We found this useful when Rails changed it's behavior with html_safe.  Having the explicit raise helped us find places that were getting escaped that shouldn't be (such as chunks of html built by helpers).
+
+
+Copyright (c) 2009-2010 3M. All rights reserved. Released under the MIT license.
+
+Authored by Jacob Burkhart.
